@@ -8,6 +8,14 @@ public class BooleanPractice {
         System.out.println(monkeyTrouble(false, false)); // → true
         System.out.println(monkeyTrouble(true, false)); // → false
 
+        System.out.println(parrotTrouble(true, 6)); //→ true
+        System.out.println(parrotTrouble(true, 7)); //→ false
+        System.out.println(parrotTrouble(false, 6));// → false}
+
+        System.out.println(makes10(9, 10)); //→ true
+        System.out.println(makes10(9, 9)); //→ false
+        System.out.println(makes10(1, 9));// → true
+
     }
 
     public static boolean sleepIn(boolean weekday, boolean vacation) {
@@ -26,9 +34,23 @@ public class BooleanPractice {
         return false;
     }
 
+//    We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if we are in trouble.
+
+    public static boolean parrotTrouble(boolean talking, int hour) {
+        if (talking && (hour < 7 || hour > 20)){
+            return true;
+        } return false;
+    }
 
 
+//Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
 
+    public static boolean makes10(int a, int b) {
+        if (a == 10 || b == 10 || a + b == 10) {
+            return true;
+        }
+        return false;
+    }
 
 
 }
